@@ -15,7 +15,8 @@ Project 2
 	My-Microservice-Api-Gateway-Zuul
 		runs on port 8090 
 		Zuul has been used to make api gateway. Provides entry points to the clients for all services.
-		Load Balanced: If multiple instance of backend service is run on different ports, it will be loadbalanced
+		Load Balancing with Zuul and Eureka : 
+			If multiple instance of backend service is run on different ports, it will be loadbalanced
 		zuul is configured to process requests starting with /api
 		
 		Following rest points are available on API Gateway  :
