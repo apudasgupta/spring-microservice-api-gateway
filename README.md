@@ -73,4 +73,4 @@ If you run all project we can see the service registered in Eureka http://localh
 	USER-DETAILS-SERVICE
 	USER-INFO-SERVICE	
 	ZUUL-API-GATEWAY-SERVICE
-
+![spring-microservice-api-gateway](https://github.com/apudasgupta/spring-microservice-api-gateway/blob/master/architecture.png)
