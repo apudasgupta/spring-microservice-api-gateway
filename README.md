@@ -6,12 +6,14 @@ Spring Microservice API Gateway using Eureka, Zuul and Hystrix
 There are 5 Spring Boot Projects:-
 
 Project 1
+
 	My-Microservice-Discovery-Server
 		Eureka running on default port 8761 
 		Eureka server for service registration and discovery
 		http://localhost:8761/
 
 Project 2
+
 	My-Microservice-Api-Gateway-Zuul
 		runs on port 8090 
 		Zuul has been used to make api gateway. Provides entry points to the clients for all services.
@@ -34,6 +36,7 @@ Project 2
 
 	
 Project 3
+
 	My-Microservice-UserInfo
 		runs on port 8095 
 		registered as USER-INFO-SERVICE in the Eureka server
@@ -45,6 +48,7 @@ Project 3
 		
 		
 Project 4
+
 	My-Microservice-UserContact
 		runs on port 8096
 		registered as USER-CONTACT-SERVICE in the Eureka server
@@ -55,6 +59,7 @@ Project 4
 			http://localhost:8096/contactInfo/getById?userId=1
 		
 Project 5
+
 	My-Microservice-UserDetails
 		runs on port 8097
 		registered as USER-DETAILS-SERVICE in the Eureka server
@@ -73,4 +78,6 @@ If you run all project we can see the service registered in Eureka http://localh
 	USER-DETAILS-SERVICE
 	USER-INFO-SERVICE	
 	ZUUL-API-GATEWAY-SERVICE
+	
+	
 ![spring-microservice-api-gateway](https://github.com/apudasgupta/spring-microservice-api-gateway/blob/master/architecture.png)
