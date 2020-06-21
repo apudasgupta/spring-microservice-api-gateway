@@ -1,0 +1,52 @@
+#spring.application.name=cloud-gateway-service
+#server.port=8099
+#management.endpoints.web.exposure.include=hystrix.stream
+
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: zuul-api-gateway-service
+
+zuul:
+  ignoredServices: '*'
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:    
+    infoservice:
+      path: /info/**
+      url: http://localhost:8095/
+    user-info-service:
+      path: /userInfoService/**
+      serviceId: user-info-service
+    user-contact-service:
+      path: /userContactService/**
+      serviceId: USER-CONTACT-SERVICE
+    user-detail-service:
+      path: /userDetailsService/**
+      serviceId: USER-DETAILS-SERVICE
+endpoints:
+  routes:
+    sensitive: false
+#ribbon:  
+#  eureka:
+#    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+# Increase the Hystrix timeout to 60s (for all)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+            
+            
+            
